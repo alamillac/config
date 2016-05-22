@@ -384,3 +384,6 @@ let g:ctrlp_prompt_mappings = {
 " Matcher utility used in CtrlP to find better results (it is similar to
 " selecta)
 let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
+
+noremap Q !!sh<CR>
+
