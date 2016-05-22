@@ -11,3 +11,19 @@ do
     echo ln -s "$PWD/$FILE" "~/.$FILE"
     ln -s "$PWD/$FILE" "~/.$FILE"
 done
+
+echo "Instalando nodejs y npm"
+echo TODO
+exit
+
+echo "Instalando plugins de vim"
+echo "Instalando Vundle"
+# install vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall
+
+echo "Instalando YouCompleteMe"
+# install YCM
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --tern-completer
+cd
