@@ -94,8 +94,15 @@ Plugin 'scrooloose/syntastic'
 " CtrlP Fuzzy file finder
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" JavaScript bundle for vim, this bundle provides syntax highlighting and
+" improved indentation
+Plugin 'pangloss/vim-javascript'
+
+" Python folding
+Plugin 'tmhedberg/SimpylFold'
+
 " Selecta like finder used with CtrlP
-Plugin 'sergei-dyshel/vim-abbrev-matcher'
+" Plugin 'sergei-dyshel/vim-abbrev-matcher'
 
 " vim-minizinc
 " MiniZinc is a medium-level constraint modelling language. It is high-level
@@ -383,7 +390,11 @@ let g:ctrlp_prompt_mappings = {
 
 " Matcher utility used in CtrlP to find better results (it is similar to
 " selecta)
-let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
+" let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
 
 noremap Q !!sh<CR>
 
+" FoldMethod
+set foldmethod=syntax
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
