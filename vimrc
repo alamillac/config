@@ -98,9 +98,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " improved indentation
 Plugin 'pangloss/vim-javascript'
 
-" Python folding
-Plugin 'tmhedberg/SimpylFold'
-
 " Selecta like finder used with CtrlP
 " Plugin 'sergei-dyshel/vim-abbrev-matcher'
 
