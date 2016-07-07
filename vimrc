@@ -109,6 +109,8 @@ Plugin 'pangloss/vim-javascript'
 " standard by the Constraint Programming community.
 Plugin 'vale1410/vim-minizinc'
 
+Plugin 'jpo/vim-railscasts-theme'
+
 let g:syntastic_python_flake8_post_args='--ignore=E501'
 
 " Automatic reloading of .vimrc
@@ -232,7 +234,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 "" set t_Co=256
 " colorscheme blue_comments
 " colorscheme apprentice
-colorscheme molokai
+colorscheme railscasts
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
