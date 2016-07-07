@@ -394,6 +394,6 @@ let g:ctrlp_prompt_mappings = {
 noremap Q !!sh<CR>
 
 " FoldMethod
-set foldmethod=syntax
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"set foldmethod=syntax
+"au BufWinLeave *.js mkview
+"au BufWinEnter *.js silent loadview
