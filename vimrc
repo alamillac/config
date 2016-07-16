@@ -377,6 +377,9 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
+  " Use ag in ack.vim
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+
   " Map for matcher
   " let g:abbrev_matcher_grep_exe = 'ag'
   " let g:abbrev_matcher_grep_args = '--numbers'
