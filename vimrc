@@ -86,6 +86,7 @@ Bundle 'wakatime/vim-wakatime'
 
 " NerdTree
 Bundle 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Linter plugin
 " Plugin 'timheap/linters.vim'
@@ -312,6 +313,31 @@ let g:syntastic_javascript_checkers = ['eslint']
 nmap <leader>t :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+
+" Hide * in executable files
+" https://github.com/scrooloose/nerdtree/pull/604/files
+let NERDTreeShowExecutableFlag=0
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('py', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('config', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('conf', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('json', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('html', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('hbs', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('js', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#151515')
 
 " ============================================================================
 " Python IDE Setup
