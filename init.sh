@@ -28,3 +28,7 @@ echo "Instalando YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --tern-completer
 cd
+
+# install entr
+echo "Instalar entr para ejecutar test python cuando haya un cambio en un archivo py"
+echo "apt install entr"
