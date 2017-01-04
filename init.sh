@@ -13,6 +13,10 @@ do
     ln -s "$PWD/$FILE" ~/.$FILE
 done
 
+# Bin files
+echo ln -s "$PWD/bin" "~/bin"
+ln -s "$PWD/bin" ~/bin
+
 echo "Instalando nodejs y npm"
 echo TODO
 exit
