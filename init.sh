@@ -1,9 +1,12 @@
 #!/bin/bash
 
-DOTFILES="i3 i3status.conf ssh/config vimrc zshrc"
+DOTFILES="i3 i3status.conf ssh/config vimrc zshrc pylintrc"
 
 echo "Se han de instalar las siguientes dependencias:"
 echo "apt-get install i3 vim tmux zsh silversearcher-ag ack-grep"
+
+echo "Instalar linters para python y js"
+echo "apt install pylint"
 echo "sudo npm install -g eslint"
 
 echo "Creando enlaces simbolicos"
