@@ -3,7 +3,7 @@
 DOTFILES="i3 i3status.conf ssh/config vimrc zshrc pylintrc"
 
 echo "Se han de instalar las siguientes dependencias:"
-echo "apt-get install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr nodejs npm"
+echo "apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr nodejs npm build-essential"
 
 echo "Instalar linters para python y js"
 echo "apt install pylint"
