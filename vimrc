@@ -112,8 +112,6 @@ Plugin 'vale1410/vim-minizinc'
 
 Plugin 'jpo/vim-railscasts-theme'
 
-let g:syntastic_python_flake8_post_args='--ignore=E501'
-
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -301,8 +299,9 @@ set laststatus=2
 set showmatch
 
 " Syntastic plugin
+let g:syntastic_python_flake8_post_args='--ignore=E501'
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "!"
