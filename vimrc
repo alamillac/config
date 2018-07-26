@@ -24,10 +24,10 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
-"call vundle#rc(path)
+"call vundle#begin(path)
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -111,6 +111,17 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'vale1410/vim-minizinc'
 
 Plugin 'jpo/vim-railscasts-theme'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Enable syntax highlighting
+" You need to reload this file for the change to apply
+"" filetype off
+filetype plugin indent on
+syntax on
+
+let g:syntastic_python_flake8_post_args='--ignore=E501'
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -234,12 +245,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " colorscheme blue_comments
 " colorscheme apprentice
 colorscheme railscasts
-
-" Enable syntax highlighting
-" You need to reload this file for the change to apply
-"" filetype off
-filetype plugin indent on
-syntax on
 
 " Showing line numbers and length
 "" set number  " show line numbers
