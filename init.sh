@@ -14,6 +14,10 @@ echo "npm install -g eslint"
 echo "Instalar slim (login manager)"
 echo "apt install slim"
 
+echo "Instalar skype"
+echo "wget -O skype-install.deb http://www.skype.com/go/skypeforlinux-64.deb"
+echo "gdebi skype-install.deb"
+
 echo "Creando enlaces simbolicos"
 for FILE in $DOTFILES
 do
