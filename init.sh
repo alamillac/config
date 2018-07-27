@@ -11,6 +11,9 @@ echo "curl -sL https://deb.nodesource.com/setup_10.x | bash -"
 echo "apt install nodejs"
 echo "npm install -g eslint"
 
+echo "Instalar slim (login manager)"
+echo "apt install slim"
+
 echo "Creando enlaces simbolicos"
 for FILE in $DOTFILES
 do

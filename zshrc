@@ -83,3 +83,4 @@ bindkey '^R' history-incremental-search-backward
 #add rails command
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #source ~/.rvm/scripts/rvm
+xset -b  # remove beep
