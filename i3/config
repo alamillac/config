@@ -38,6 +38,9 @@ set $mod Mod4
 exec --no-startup-id lxsession -s Lubuntu -e LXDE
 exec --no-startup-id  /usr/bin/feh --bg-scale "/mnt/documentos/docs/Media/Images/wallpaper.jpg"
 
+# Autolock
+exec xautolock -time 15 -locker "~/bin/fuzzy_lock.sh" &
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -160,7 +163,7 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #bindsym $mod+Shift+e exec lxsession-logout
 #bindsym $mod+Shift+e exec lxsession-default lock
-bindsym $mod+Shift+e exec i3lock
+bindsym $mod+Shift+e exec "~/bin/fuzzy_lock.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
