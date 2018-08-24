@@ -164,6 +164,7 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec lxsession-logout
 #bindsym $mod+Shift+e exec lxsession-default lock
 bindsym $mod+Shift+e exec "~/bin/fuzzy_lock.sh"
+bindsym $mod+Shift+s exec "~/bin/fuzzy_lock.sh --no-off && systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

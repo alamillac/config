@@ -1,4 +1,8 @@
-#!/bin/sh -e
+#!/bin/bash
+
+screen_off() {
+    sleep 60; pgrep i3lock && xset dpms force off
+}
 
 # Take a screenshot
 scrot /tmp/screen_locked.png
@@ -10,4 +14,4 @@ mogrify -scale 20% -scale 500% /tmp/screen_locked.png
 i3lock -i /tmp/screen_locked.png
 
 # Turn the screen off after a delay.
-sleep 60; pgrep i3lock && xset dpms force off
+[ "$1" == "--no-off" ] || screen_off
