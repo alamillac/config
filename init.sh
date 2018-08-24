@@ -3,10 +3,12 @@
 DOTFILES="i3 i3status.conf ssh/config vimrc zshrc pylintrc"
 
 echo "Se han de instalar las siguientes dependencias:"
-echo "apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr nodejs build-essential vim-nox curl"
+echo "apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl"
 
 echo "Instalar linters para python y js"
 echo "apt install pylint"
+
+echo "Instalar nodejs"
 echo "curl -sL https://deb.nodesource.com/setup_10.x | bash -"
 echo "apt install nodejs"
 echo "npm install -g eslint"
@@ -20,6 +22,10 @@ echo "apt-get install xautolock imagemagick"
 echo "Instalar skype"
 echo "wget -O skype-install.deb http://www.skype.com/go/skypeforlinux-64.deb"
 echo "gdebi skype-install.deb"
+
+echo "Instalar oh-my-zsh"
+echo "https://github.com/robbyrussell/oh-my-zsh"
+echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
 
 echo "Creando enlaces simbolicos"
 for FILE in $DOTFILES
