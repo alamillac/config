@@ -57,3 +57,7 @@ cd
 # install entr
 echo "Instalar entr para ejecutar test python cuando haya un cambio en un archivo py"
 echo "apt install entr"
+
+# install desktop packages
+echo "Instalar aplicaciones de escritorio"
+echo "apt install gimp pcmanfm evince feh scrot"
