@@ -34,8 +34,8 @@ for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggl
 
 set $mod Mod4
 
-#exec --no-startup-id nm-applet #network-manager applet
-exec --no-startup-id lxsession -s Lubuntu -e LXDE
+exec --no-startup-id nm-applet #network-manager applet
+#exec --no-startup-id lxsession -s Lubuntu -e LXDE
 exec --no-startup-id  /usr/bin/feh --bg-scale "/documentos/Documents/Media/Images/wallpaper.jpg"
 
 # Autolock

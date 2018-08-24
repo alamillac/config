@@ -61,3 +61,11 @@ echo "apt install entr"
 # install desktop packages
 echo "Instalar aplicaciones de escritorio"
 echo "apt install gimp pcmanfm evince feh scrot"
+
+# keymap es
+echo "Establecer el teclado español"
+echo "setxkbmap es"
+
+echo "Instalar wireless firmware en debian"
+echo "Hay que habilitar non-free packages en sources.list y luego instalar el firmware"
+echo "apt-get install firmware-iwlwifi"
