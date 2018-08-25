@@ -60,7 +60,7 @@ echo "apt install entr"
 
 # install desktop packages
 echo "Instalar aplicaciones de escritorio"
-echo "apt install gimp pcmanfm evince feh scrot"
+echo "apt install gimp pcmanfm evince feh scrot libnotify-bin"
 
 # keymap es
 echo "Establecer el teclado español"
