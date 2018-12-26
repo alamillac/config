@@ -27,6 +27,9 @@ echo "Instalar oh-my-zsh"
 echo "https://github.com/robbyrussell/oh-my-zsh"
 echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
 
+echo "Instalar latex"
+echo "sudo apt-get install texlive texlive-latex-extra python-pygments"
+
 echo "Creando enlaces simbolicos"
 for FILE in $DOTFILES
 do
