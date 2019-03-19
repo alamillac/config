@@ -23,7 +23,7 @@ docker start beanstalkd redis mysql
 # docker run --name mysql -e MYSQL_USER=dev -e MYSQL_PASSWORD=devdev -e MYSQL_DATABASE=unnax_dev -e MYSQL_ROOT_PASSWORD=devdev -p 3306:3306 -d mariadb:10.0.24
 
 # Start bansukai
-lxterm -title "BANSUKAI" -e "cd $BANSUKAI_PATH && DJANGO_SETTINGS_MODULE=unnax.settings.local_mysql ${BANSUKAI_VENV}/bin/python manage.py runserver; bash" &
+lxterm -title "BANSUKAI" -e "cd $BANSUKAI_PATH && DJANGO_SETTINGS_MODULE=unnax.settings.local_mysql ${BANSUKAI_VENV}/bin/python manage.py runserver 0.0.0.0:8000; bash" &
 
 # Start sarah
 lxterm -title "SARAH" -e "cd $SARAH_PATH && SARAH_SETTINGS_MODULE=sarah.conf.local ${SARAH_VENV}/bin/python main.py; bash" &
