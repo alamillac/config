@@ -72,3 +72,12 @@ echo "setxkbmap es"
 echo "Instalar wireless firmware en debian"
 echo "Hay que habilitar non-free packages en sources.list y luego instalar el firmware"
 echo "apt-get install firmware-iwlwifi"
+
+# install pyenv
+echo "Instalar pyenv para usar una version especifica de python"
+echo "curl https://pyenv.run | bash"
+echo "apt install libffi-dev"
+echo "Instalar python 3.7"
+echo "pyenv install 3.7.3"
+echo "Use pyenv:"
+echo "pyenv shell 3.7.3"
