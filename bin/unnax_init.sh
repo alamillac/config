@@ -34,3 +34,6 @@ lxterm -title "PUSHER" -e "cd $PUSHER_PATH && ${PUSHER_VENV}/bin/python main.py;
 
 # Start fitnance
 lxterm -title "FITNANCE" -e "cd $BANSUKAI_PATH && DJANGO_SETTINGS_MODULE=fitnance_cooker.settings.local ${BANSUKAI_VENV}/bin/python manage.py run_fitnance_cooker; bash" &
+
+# Start checkify
+lxterm -title "CHECKIFY" -e "cd $BANSUKAI_PATH && DJANGO_SETTINGS_MODULE=checkify.settings.local ${BANSUKAI_VENV}/bin/python manage.py run_checkify; bash" &

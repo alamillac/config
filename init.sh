@@ -61,6 +61,10 @@ cd
 echo "Instalar entr para ejecutar test python cuando haya un cambio en un archivo py"
 echo "apt install entr"
 
+# Ex entr:
+# echo "Escuchando archivo $TFILE:"
+# printf "unnax/api/v2/tests/test_$TFILE\nunnax/api/v2/views/$TFILE" | entr ./manage.py test -p test_$TFILE
+
 # install desktop packages
 echo "Instalar aplicaciones de escritorio"
 echo "apt install gimp pcmanfm evince feh scrot libnotify-bin"
