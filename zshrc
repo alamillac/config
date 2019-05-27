@@ -87,5 +87,5 @@ xset -b  # remove beep
 
 #add pyenv
 export PATH="$PATH:$HOME/.pyenv/bin"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"

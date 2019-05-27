@@ -99,6 +99,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " improved indentation
 Plugin 'pangloss/vim-javascript'
 
+" Syntax highlighting for JSX in Typescript.
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+
 " Selecta like finder used with CtrlP
 " Plugin 'sergei-dyshel/vim-abbrev-matcher'
 
@@ -379,6 +383,7 @@ abbr #e  ***********************************************************************
 " Syntax color
 "
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " Run a given vim command on the results of fuzzy selecting from a given shell
 " command. See usage below.
