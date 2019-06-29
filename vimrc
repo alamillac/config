@@ -1,20 +1,12 @@
-" Sample .vimrc file by Martin Brochhaus
-" Presented at PyCon APAC 2012
-
 " Unmap the arrow keys
-no <down> ddp
+no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
-no <up> ddkp
+no <up> <Nop>
 ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
-
-" ============================================
-" Note to myself:
-" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
-" ============================================
 
 
 " ============================================
@@ -25,34 +17,16 @@ call plug#begin('~/.vim/plugged')
 " Keep Plugin commands between here and filetype plugin indent on.
 " Install Plugins - Launch vim and run :PlugInstall
 
-
 " Snippets ==================================
-" Track the engine.
-Plug 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-n>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 " end Snippets ===============================
 
 " powerline ==================================
-
 Plug 'bling/vim-airline'
-
 " ============================================
 
 " Code Completion ============================
 " YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
-
 " end Code Completion ========================
 
 " linenumber plugin
@@ -62,25 +36,15 @@ Plug 'myusuf3/numbers.vim'
 Plug 'kshenoy/vim-signature'
 " ============================================
 
-" handlebars plugin
-Plug 'mustache/vim-mustache-handlebars'
-
 " grep like
 Plug 'mileszs/ack.vim'
-
-" CoffeeScript plugin
-Plug 'kchmck/vim-coffee-script'
-
-" time recorder https://wakatime.com/
-Plug 'wakatime/vim-wakatime'
 
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Linter plugin
-" Plugin 'timheap/linters.vim'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 
 " CtrlP Fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
@@ -93,17 +57,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
-" Selecta like finder used with CtrlP
-" Plugin 'sergei-dyshel/vim-abbrev-matcher'
-
-" vim-minizinc
-" MiniZinc is a medium-level constraint modelling language. It is high-level
-" enough to express most constraint problems easily, but low-level enough that
-" it can be mapped onto existing solvers easily and consistently. It is a
-" subset of the higher-level language Zinc. We hope it will be adopted as a
-" standard by the Constraint Programming community.
-Plug 'vale1410/vim-minizinc'
-
+" Vim theme
 Plug 'jpo/vim-railscasts-theme'
 
 " vim-prettier: it will auto format javascript, typescript, less, scss, css,
@@ -118,8 +72,6 @@ call plug#end()            " required
 "" filetype off
 filetype plugin indent on
 syntax on
-
-let g:syntastic_python_flake8_post_args='--ignore=E501'
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -165,29 +117,6 @@ set clipboard=unnamed
 
 " Remap esc key
 inoremap jj <ESC>
-
-" Mouse and backspace
-"" set mouse=a  " on OSX press ALT and click
-"" set bs=2     " make backspace behave like normal again
-
-" Bind nohl
-" Removes highlight of your last search
-" ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-"" noremap <C-n> :nohl<CR>
-"" vnoremap <C-n> :nohl<CR>
-"" inoremap <C-n> :nohl<CR>
-
-
-" Quicksave command
-"" noremap <C-Z> :update<CR>
-"" vnoremap <C-Z> <C-C>:update<CR>
-"" inoremap <C-Z> <C-O>:update<CR>
-
-
-" Quick quit command
-"" noremap <Leader>e :quit<CR>  " Quit current window
-"" noremap <Leader>E :qa!<CR>   " Quit all windows
-
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -237,26 +166,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-"" set t_Co=256
-" colorscheme blue_comments
-" colorscheme apprentice
 colorscheme railscasts
-
-" Showing line numbers and length
-"" set number  " show line numbers
-"" set tw=79   " width of document (used by gd)
-"" set nowrap  " don't automatically wrap on load
-"" set fo-=t   " don't automatically wrap text when typing
-"" set colorcolumn=80
-"" highlight ColorColumn ctermbg=233
-
-
-" easier formatting of paragraphs
-"" vmap Q gq
-"" nmap Q gqap
-
 
 " stop highlighting search
 map <Leader><Space> :noh<CR>
@@ -266,7 +176,6 @@ map <Leader><Space> :noh<CR>
 set history=700
 set undolevels=700
 
-
 " Real programmers don't use TABs but spaces
 set tabstop=4
 set softtabstop=4
@@ -274,7 +183,6 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set autoindent
-
 
 " Make search case insensitive
 set hlsearch
@@ -292,9 +200,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Set status line
-" set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
-
 " Always display a status line at the bottom of the window
 set laststatus=2
 
@@ -308,16 +213,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " Overwrite default prettier configuration
 let g:prettier#config#tab_width = 4
 
-
-" Syntastic plugin
-let g:syntastic_python_flake8_post_args='--ignore=E501'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "!"
-let g:syntastic_java_javac_config_file_enabled = 1
-let g:syntastic_javascript_checkers = ['eslint']
 
 " NERDTree
 nmap <leader>t :NERDTreeToggle<CR>
@@ -355,11 +250,6 @@ call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#151515')
 
 map <Leader>b Oimport ipdb; ipdb.set_trace()  # BREAKPOINT<C-c>
 
-" Python folding
-" mkdir -p ~/.vim/ftplugin
-" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-"" set nofoldenable
-
 " ************************************************************************
 " B E G I N  A U T O C O M M A N D S
 "
@@ -387,25 +277,9 @@ abbr #e  ***********************************************************************
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
-" Run a given vim command on the results of fuzzy selecting from a given shell
-" command. See usage below.
-" function! SelectaCommand(choice_command, selecta_args, vim_command)
-"   try
-"     silent let selection = system(a:choice_command . " | selecta " . a:selecta_args)
-"   catch /Vim:Interrupt/
-"     " Swallow the ^C so that the redraw below happens; otherwise there will be
-"     " leftovers from selecta on the screen
-"     redraw!
-"     return
-"   endtry
-"   redraw!
-"   exec a:vim_command . " " . selection
-" endfunction
-
-" Find all files in all non-dot directories starting in the working directory.
-" Fuzzy select one of those. Open the selected file with :e.
-" nnoremap <leader>f  :tab split<CR>:call SelectaCommand('select_text_files.sh', "", ":e")<cr>
+" CtrlP Fuzzy file finder
 nnoremap <leader>f :CtrlP<CR>
+
 " let g:ctrlp_user_command = 'find %s -type f'
 if executable('ag')
   " Use Ag over Grep
@@ -432,8 +306,3 @@ let g:ctrlp_prompt_mappings = {
 " let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
 
 noremap Q !!sh<CR>
-
-" FoldMethod
-"set foldmethod=syntax
-"au BufWinLeave *.js mkview
-"au BufWinEnter *.js silent loadview
