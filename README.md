@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal
 ```
 
 #### Python and Js lint
@@ -154,3 +154,7 @@ The configuration can be sync using [settings sync plugin](https://marketplace.v
 ```
 setxkbmap es
 ```
+
+#### Set lxterminal font
+
+Set font to DejaVu Sans Mono Book 11
