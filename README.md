@@ -20,6 +20,18 @@ apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucon
 apt install pylint
 ```
 
+To avoid false 'Unable to import' errors, edit /usr/bin/pylint and replace:
+
+```
+#!/usr/bin/python
+```
+
+with:
+
+```
+#!/usr/bin/python
+```
+
 ```
 # Nodejs
 curl -sL https://deb.nodesource.com/setup_10.x | bash -
