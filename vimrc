@@ -309,4 +309,4 @@ let g:ctrlp_prompt_mappings = {
 " selecta)
 " let g:ctrlp_match_func = { 'match': 'ctrlp#abbrev_matcher#match' }
 
-noremap Q !!sh<CR>
+noremap Q !!bash<CR>
