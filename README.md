@@ -63,11 +63,12 @@ apt-get install texlive texlive-latex-extra python-pygments
 
 #### Vim plugins
 
-Install vundle
+Install vim-plug
 
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +BundleInstall
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall
 ```
 
 Install YouCompleteMe
@@ -75,7 +76,7 @@ Install YouCompleteMe
 ```
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 apt install cmake python-dev
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe
 ./install.py --tern-completer
 ```
 

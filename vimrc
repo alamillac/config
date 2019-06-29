@@ -18,30 +18,20 @@ ino <up> <Nop>
 
 
 " ============================================
-" to use Vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" to use vim-plug
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#begin(path)
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Keep Plugin commands between here and filetype plugin indent on.
-" Install Plugins - Launch vim and run :PluginInstall
+" Install Plugins - Launch vim and run :PlugInstall
 
 
 " Snippets ==================================
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<s-tab>"
@@ -55,53 +45,53 @@ let g:UltiSnipsEditSplit="vertical"
 
 " powerline ==================================
 
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " ============================================
 
 " Code Completion ============================
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " end Code Completion ========================
 
 " linenumber plugin
-Plugin 'myusuf3/numbers.vim'
+Plug 'myusuf3/numbers.vim'
 
 " show marks
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 " ============================================
 
 " handlebars plugin
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 
 " grep like
-Bundle 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " CoffeeScript plugin
-Bundle 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " time recorder https://wakatime.com/
-Bundle 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 
 " NerdTree
-Bundle 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Linter plugin
 " Plugin 'timheap/linters.vim'
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " CtrlP Fuzzy file finder
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " JavaScript bundle for vim, this bundle provides syntax highlighting and
 " improved indentation
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " Syntax highlighting for JSX in Typescript.
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Selecta like finder used with CtrlP
 " Plugin 'sergei-dyshel/vim-abbrev-matcher'
@@ -112,12 +102,16 @@ Plugin 'peitalin/vim-jsx-typescript'
 " it can be mapped onto existing solvers easily and consistently. It is a
 " subset of the higher-level language Zinc. We hope it will be adopted as a
 " standard by the Constraint Programming community.
-Plugin 'vale1410/vim-minizinc'
+Plug 'vale1410/vim-minizinc'
 
-Plugin 'jpo/vim-railscasts-theme'
+Plug 'jpo/vim-railscasts-theme'
+
+" vim-prettier: it will auto format javascript, typescript, less, scss, css,
+" json, graphql and markdown files
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
@@ -306,6 +300,14 @@ set laststatus=2
 
 " showmatch: Show the matching bracket for the last ')'?
 set showmatch
+
+" Prettier plugin
+" Autoformat on save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" Overwrite default prettier configuration
+let g:prettier#config#tab_width = 4
+
 
 " Syntastic plugin
 let g:syntastic_python_flake8_post_args='--ignore=E501'
