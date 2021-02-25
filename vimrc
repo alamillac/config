@@ -58,7 +58,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
 " Vim theme
-"Plug 'jpo/vim-railscasts-theme'
+Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasiser/vim-code-dark'
 
 " vim-prettier: it will auto format javascript, typescript, less, scss, css,
@@ -169,8 +169,8 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Color scheme
-"colorscheme railscasts
-colorscheme codedark
+colorscheme railscasts
+" colorscheme codedark
 
 " stop highlighting search
 map <Leader><Space> :noh<CR>

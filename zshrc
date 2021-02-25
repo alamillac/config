@@ -89,3 +89,6 @@ xset -b  # remove beep
 export PATH="$PATH:$HOME/.pyenv/bin"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

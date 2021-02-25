@@ -107,6 +107,10 @@ echo "Escuchando archivo $TFILE:"
 printf "unnax/api/v2/tests/test_$TFILE\nunnax/api/v2/views/$TFILE" | entr ./manage.py test -p test_$TFILE
 ```
 
+```
+$ find . -name '*.py' | entr nosetests
+```
+
 #### Install desktop packages
 
 ```
