@@ -162,3 +162,11 @@ setxkbmap es
 #### Set lxterminal font
 
 Set font to DejaVu Sans Mono Book 11
+
+### SSH
+
+Port forwarding
+
+```
+ssh -f ubuntu@crypto.example.com -L 5555:localhost:5555 -N
+```
