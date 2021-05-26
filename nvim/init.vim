@@ -50,3 +50,17 @@ map <Leader>m <esc>:tabnext<CR>
 " Buffer naviation
 map <M-Left> :bprevious<CR>
 map <M-Right> :bnext<CR>
+
+" Usar <líder> + y para copiar al portapapeles
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+
+" Usar <líder> + d para cortar al portapapeles
+vnoremap <leader>d "+d
+nnoremap <leader>d "+d
+
+" Usar <líder> + p para pegar desde el portapapeles
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>P "+P

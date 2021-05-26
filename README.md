@@ -73,6 +73,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 apt-get install texlive texlive-latex-extra python-pygments
 ```
 
+#### Neovim
+
+https://stsewd.dev/es/posts/neovim-installation-configuration/
+
 #### Vim plugins
 
 Install vim-plug
