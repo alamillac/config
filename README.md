@@ -77,6 +77,14 @@ apt-get install texlive texlive-latex-extra python-pygments
 
 https://stsewd.dev/es/posts/neovim-installation-configuration/
 
+Install vim-plug
+
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall
+```
+
 #### Vim plugins
 
 Install vim-plug
@@ -141,8 +149,8 @@ apt install libffi-dev"
 Then you can use it like this:
 
 ```
-pyenv install 3.7.3"
-pyenv shell 3.7.3"
+pyenv install 3.7.3
+pyenv shell 3.7.3
 ```
 
 #### Install Visual Studio Code
@@ -154,6 +162,12 @@ sudo dpkg -i code_1.34.0-1557957934_amd64.deb
 ```
 
 The configuration can be sync using [settings sync plugin](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+
+#### Install meld
+
+```
+apt install meld
+```
 
 ### Config
 
