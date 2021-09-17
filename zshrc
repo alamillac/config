@@ -92,3 +92,6 @@ export PATH="$PATH:$HOME/.pyenv/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#add golang
+export PATH="$PATH:$HOME/usr/local/go/bin"

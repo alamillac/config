@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-WORK_PATH=${HOME}/Documentos/projects
+WORK_PATH=${HOME}/Documentos/Trabajo/unnax
 VENV_PATH=/opt/venv
 
 # Paths
