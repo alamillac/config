@@ -5,7 +5,7 @@ screen_off() {
 }
 
 # Take a screenshot
-scrot /tmp/screen_locked.png
+scrot -o /tmp/screen_locked.png
 
 # Pixellate it 5x
 mogrify -scale 20% -scale 500% /tmp/screen_locked.png
