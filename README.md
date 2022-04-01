@@ -14,6 +14,9 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal neovim
 ```
 
+#### DBeaver
+https://dbeaver.io/download/
+
 #### Python and Js lint
 
 ```
@@ -56,6 +59,14 @@ apt-get install xautolock imagemagick
 ```
 wget -O skype-install.deb http://www.skype.com/go/skypeforlinux-64.deb
 gdebi skype-install.deb
+```
+
+#### Oh-my-bash
+
+More info [here](https://github.com/ohmybash/oh-my-bash)
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
 #### Oh-my-zsh
