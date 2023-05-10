@@ -199,3 +199,19 @@ Port forwarding
 ```
 ssh -f ubuntu@crypto.example.com -L 5555:localhost:5555 -N
 ```
+
+### mitmproxy
+
+Run mitmproxy
+
+```
+docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-host 0.0.0.0
+```
+
+Configure proxy in browser
+
+Download certificates
+
+```
+firefox https://mitm.it
+```
