@@ -110,7 +110,7 @@ Install YouCompleteMe
 
 ```
 sudo ln -s /usr/bin/nodejs /usr/bin/node
-apt install cmake python-dev
+apt install cmake python-dev-is-python3
 cd ~/.vim/plugged/YouCompleteMe
 ./install.py --tern-completer
 ```
