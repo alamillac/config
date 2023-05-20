@@ -215,3 +215,9 @@ Download certificates
 ```
 firefox https://mitm.it
 ```
+
+### Play tone after some seconds
+```
+sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/message-new-instant.oga
+sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+```

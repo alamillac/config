@@ -10,6 +10,6 @@ for FILE in ${FILES_TO_UPDATE}; do
     MIGRATION_BASENAME=$(echo $FILE | cut -d'/' -f3 | cut -d'-' -f2-)
     MIGRATION_NAME="${PREFIX}-${MIGRATION_BASENAME}"
     echo "Renaming ${FILE} => ${DB_PATH}${MIGRATION_NAME}"
-    #mv ${FILE} ${DB_PATH}${MIGRATION_NAME}
+    mv ${FILE} ${DB_PATH}${MIGRATION_NAME}
     sleep 1.1 # To change the prefix
 done
