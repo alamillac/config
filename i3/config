@@ -56,19 +56,24 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 #volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3+ && killall -SIGUSR1 i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3+ && killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && killall -SIGUSR1 i3status
 
 #volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3- && killall -SIGUSR1 i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3- && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && killall -SIGUSR1 i3status
 
 #play next song
-bindsym XF86AudioNext exec --no-startup-id audacious -f
+#bindsym XF86AudioNext exec --no-startup-id audacious -f
+bindsym XF86AudioNext exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 #play previous song
-bindsym XF86AudioPrev exec --no-startup-id audacious -r
+#bindsym XF86AudioPrev exec --no-startup-id audacious -r
+bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 #play pause song
-bindsym XF86AudioPlay exec --no-startup-id audacious -t
+#bindsym XF86AudioPlay exec --no-startup-id audacious -t
+bindsym XF86AudioPlay exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
