@@ -221,3 +221,10 @@ firefox https://mitm.it
 sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/message-new-instant.oga
 sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/bell.oga
 ```
+
+### Load tests
+[ddosify docs](https://github.com/ddosify/ddosify/tree/master/engine_docs)
+
+```
+ddosify -t http://target_site.com -o stdout-json | jq .avg_duration
+```
