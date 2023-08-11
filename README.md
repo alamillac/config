@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal neovim
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal ripgrep
 ```
 
 #### DBeaver
@@ -85,6 +85,25 @@ apt-get install texlive texlive-latex-extra python-pygments
 ```
 
 #### Neovim
+
+Download nvim https://github.com/neovim/neovim/releases/tag/stable
+
+Install package manager [packer](https://github.com/wbthomason/packer.nvim)
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+In nvim:
+
+```
+:PackerSync
+```
+
+[Nice video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&index=6)
+
+##### Deprecated installation
 
 https://stsewd.dev/es/posts/neovim-installation-configuration/
 
