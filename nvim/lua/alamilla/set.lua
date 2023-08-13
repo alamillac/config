@@ -1,3 +1,5 @@
+vim.g.mapleader = " " -- Set <Leader>
+
 vim.opt.guicursor = ""
 
 vim.opt.number = true  -- Muestra los números de las lineas
@@ -46,8 +48,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
-vim.g.mapleader = " "
 
 -- Desactivar el mouse en insert mode (Solo se permite en normal y visual "nv")
 vim.opt.mouse = "nv"
