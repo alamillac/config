@@ -11,7 +11,12 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal ripgrep
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal
+```
+
+nvim telescope dependencies for fuzzy finder
+```
+apt install ripgrep fd-find
 ```
 
 #### DBeaver
@@ -99,6 +104,15 @@ In nvim:
 
 ```
 :PackerSync
+```
+
+Alias vim to nvim in .bashrc
+
+```
+alias vim="nvim"
+alias vi="nvim"
+```
+alias oldvim="vim"
 ```
 
 [Nice video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&index=6)
