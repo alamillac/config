@@ -59,6 +59,9 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
 -- Replace a word with another saved in the 0 register
 vim.api.nvim_set_keymap('n', '<Leader>rw', 'viw"0p', { noremap = true })
 
+-- Copy all line
+vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true })
+
 -- Easier moving of code blocks
 vim.api.nvim_set_keymap('x', '<', '<gv', { noremap = true })  -- better indentation
 vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true })  -- better indentation
