@@ -215,11 +215,27 @@ apt install meld
 
 ### Config
 
-#### keymap es
+#### keymap
+
+For spanish keyboard
 
 ```
 setxkbmap es
 ```
+
+For us keyboard
+
+```
+setxkbmap us
+```
+
+or
+
+```
+setxkbmap -layout us -variant intl
+```
+
+Edit **/etc/X11/xorg.conf.d/00-keyboard.conf** to make it permanently
 
 #### Set lxterminal font
 
