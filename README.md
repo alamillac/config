@@ -277,3 +277,14 @@ sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/bell.oga
 ```
 ddosify -t http://target_site.com -o stdout-json | jq .avg_duration
 ```
+
+### Install Alacritty and set as the default terminal-emulator 
+Follow the [install](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) instructions
+
+Set alacritty as the default terminal with the following command
+```
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $(which alacritty) 50
+sudo update-alternatives --config x-terminal-emulator
+```
+
+For true colors read [here](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
