@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
   -- })
 
   use 'olimorris/onedarkpro.nvim' -- Colorscheme
+  use({'catppuccin/vim', as = 'catppuccin'})
+
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')

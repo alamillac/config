@@ -102,7 +102,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 In nvim:
 
+From packer.lua in nvim config files
 ```
+:source
 :PackerSync
 ```
 
@@ -287,4 +289,8 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 sudo update-alternatives --config x-terminal-emulator
 ```
 
+Install Jetbrains font from [here](https://www.jetbrains.com/lp/mono/#how-to-install)
+
 For true colors read [here](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
+
+Configurations settings can be obtained [here](https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd)
