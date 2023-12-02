@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa fzf zoxide
 ```
 
 nvim telescope dependencies for fuzzy finder
@@ -271,6 +271,17 @@ firefox https://mitm.it
 ```
 sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/message-new-instant.oga
 sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+```
+
+### Search for directories
+#### Fuzzy finder
+```
+fzf
+```
+
+#### Rip grep
+```
+rg PATTERN 
 ```
 
 ### Load tests
