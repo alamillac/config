@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES="i3 i3status.conf ssh/config vimrc zshrc bashrc pylintrc"
+DOTFILES="i3 i3status.conf ssh/config vimrc zshrc bashrc pylintrc zoxide.bash"
 
 echo "Creando enlaces simbolicos"
 for FILE in $DOTFILES

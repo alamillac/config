@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa fzf zoxide
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa zoxide
 ```
 
 nvim telescope dependencies for fuzzy finder
@@ -275,6 +275,9 @@ sleep 10 && paplay /usr/share/sounds/freedesktop/stereo/bell.oga
 
 ### Search for directories
 #### Fuzzy finder
+Install from [repo](https://github.com/junegunn/fzf#installation) to have last version and autocomplete in bash
+
+Run the following to use it:
 ```
 fzf
 ```
@@ -305,3 +308,15 @@ Install Jetbrains font from [here](https://www.jetbrains.com/lp/mono/#how-to-ins
 For true colors read [here](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
 
 Configurations settings can be obtained [here](https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd)
+
+### Install Tmux Plugin Manager (TPM)
+The instructions can be found [here](https://github.com/tmux-plugins/tpm#installation)
+
+First download the repo
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+And then to install the plugins:
+'Ctl+b + I'
+inside a tmux session
