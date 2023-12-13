@@ -9,7 +9,7 @@ do
     ln -s "$PWD/$FILE" ~/.$FILE
 done
 
-CONFIG_DOTFILES="nvim alacritty"
+CONFIG_DOTFILES="nvim alacritty tmux"
 for FILE in $CONFIG_DOTFILES
 do
     echo ln -s "$PWD/$FILE" "~/.config/$FILE"
