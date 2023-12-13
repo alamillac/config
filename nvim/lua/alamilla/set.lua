@@ -19,7 +19,7 @@ vim.opt.smartindent = true
 
 vim.opt.hidden = true  -- Permitir cambiar de buffers sin tener que guardarlos
 
-vim.opt.wrap = false
+vim.opt.wrap = true -- To show long lines
 
 vim.opt.swapfile = false
 vim.opt.backup = false
