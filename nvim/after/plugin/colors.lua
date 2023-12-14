@@ -4,7 +4,7 @@ require("onedarkpro").setup({
   },
   highlights = {
     Comment = { underline = true, extend = true },
-    MatchParen = { underline = true, extend = true }
+    MatchParen = { extend = true, fg = "#528BFF", bg = "#515A6B" }
   }
 })
 
