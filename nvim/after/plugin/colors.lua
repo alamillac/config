@@ -1,6 +1,10 @@
 require("onedarkpro").setup({
   options = {
     transparency = true
+  },
+  highlights = {
+    Comment = { underline = true, extend = true },
+    MatchParen = { underline = true, extend = true }
   }
 })
 
