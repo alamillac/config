@@ -70,10 +70,10 @@ vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true })  -- better indentat
 vim.api.nvim_set_keymap('x', '<Tab>', '>gv', { noremap = true })
 vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
 
-vim.api.nvim_set_keymap('i', '(', '()<ESC>i', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '[', '[]<ESC>i', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '{', '{}<ESC>i', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '{{', '{}<ESC>i<CR><CR><Up><C-f>', { noremap = true })  -- Add closing parenthesis and brackets. Press <CR> twice, go <Up> a line, and autoindent (<C-f>)
+vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true })  -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true })  -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true })  -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '{{', '{}<Left><CR><CR><Up><C-f>', { noremap = true })  -- Add closing parenthesis and brackets. Press <CR> twice, go <Up> a line, and autoindent (<C-f>)
 
 -- Open a new tab and search for something
 -- vim.api.nvim_set_keymap('n', '<Leader>a', ':tab split<CR>:Ack ""<left>', { noremap = true })
