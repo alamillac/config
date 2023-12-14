@@ -20,9 +20,7 @@ return require('packer').startup(function(use)
   --         vim.cmd('colorscheme rose-pine')
   --     end
   -- })
-
   use 'olimorris/onedarkpro.nvim' -- Colorscheme
-  use({'catppuccin/vim', as = 'catppuccin'})
 
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -31,6 +29,7 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('tpope/vim-obsession')
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
