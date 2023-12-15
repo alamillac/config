@@ -108,6 +108,17 @@ From packer.lua in nvim config files
 :PackerSync
 ```
 
+Optional, install all parsers from treesitter
+```
+:TSInstall all 
+:TSUpdate
+```
+
+Check installation
+```
+:checkhealth
+```
+
 Alias vim to nvim in .bashrc
 
 ```
