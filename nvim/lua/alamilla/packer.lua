@@ -51,4 +51,6 @@ return require('packer').startup(function(use)
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
+
+  use('nvimtools/none-ls.nvim')
 end)
