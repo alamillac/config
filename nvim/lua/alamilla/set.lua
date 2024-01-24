@@ -41,7 +41,7 @@ vim.opt.background = "dark"
 
 -- Show tab characters. Visual whitespace.
 vim.opt.list = true
-vim.opt.listchars = "tab:>."
+vim.opt.listchars = "tab:>.,trail:·,extends:>,precedes:<"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
