@@ -59,13 +59,6 @@ apt install slim
 apt-get install xautolock imagemagick
 ```
 
-#### Skype
-
-```
-wget -O skype-install.deb http://www.skype.com/go/skypeforlinux-64.deb
-gdebi skype-install.deb
-```
-
 #### Oh-my-bash
 
 More info [here](https://github.com/ohmybash/oh-my-bash)
@@ -80,7 +73,15 @@ More info [here](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
+#### ZIM (zsh)
+
+More info [here](https://zimfw.sh/)
+
+```
+chsh -s $(which zsh) # Cambia la shell a zsh por defecto
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
 #### Latex
@@ -130,37 +131,6 @@ alias oldvim="vim"
 
 [Nice video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&index=6)
 
-##### Deprecated installation
-
-https://stsewd.dev/es/posts/neovim-installation-configuration/
-
-Install vim-plug
-
-```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall
-```
-
-#### Vim plugins
-
-Install vim-plug
-
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall
-```
-
-Install YouCompleteMe
-
-```
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-apt install cmake python-dev-is-python3
-cd ~/.vim/plugged/YouCompleteMe
-./install.py --tern-completer
-```
-
 #### Entr
 
 With `entr` is possible to execute a command when a file changes. This is useful to run tests when a code file changes.
@@ -186,41 +156,9 @@ $ find . -name '*.py' | entr nosetests
 apt install gimp pcmanfm evince feh scrot libnotify-bin
 ```
 
-#### Wireless firmware for debian
-
-The non-free packages should be enabled in sources.list file and then install the firmware.
-
-```
-apt-get install firmware-iwlwifi
-```
-
-#### Install pyenv
-
-With pyenv is possible to use a specific python version.
-
-```
-curl https://pyenv.run | bash"
-apt install libffi-dev"
-```
-
-Then you can use it like this:
-
-```
-pyenv install 3.7.3
-pyenv shell 3.7.3
-```
-
-#### Install Visual Studio Code
-
-Download the deb package from [here](https://code.visualstudio.com/docs/setup/linux) and install it.
-
-```
-sudo dpkg -i code_1.34.0-1557957934_amd64.deb
-```
-
-The configuration can be sync using [settings sync plugin](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
-
 #### Install meld
+
+Meld, compara archivos y carpetas de forma gráfica
 
 ```
 apt install meld
@@ -314,7 +252,6 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-Install Jetbrains font from [here](https://www.jetbrains.com/lp/mono/#how-to-install)
 Patched font for tmux [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraMono.zip). More fonts [here](https://www.nerdfonts.com/font-downloads)
 
 ```
