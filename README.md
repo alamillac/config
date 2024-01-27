@@ -315,6 +315,12 @@ sudo update-alternatives --config x-terminal-emulator
 ```
 
 Install Jetbrains font from [here](https://www.jetbrains.com/lp/mono/#how-to-install)
+Patched font for tmux [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraMono.zip). More fonts [here](https://www.nerdfonts.com/font-downloads)
+
+```
+fc-cache -f -v # To update cache fonts
+fc-list # To list all the fonts
+```
 
 For true colors read [here](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
 
