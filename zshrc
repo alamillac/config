@@ -163,4 +163,4 @@ alias zr='zoxide remove'
 export NVM_DIR="$HOME/.nvm"
 alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
-export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+export PATH=$HOME/bin:$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
