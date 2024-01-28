@@ -145,6 +145,7 @@ alias vi="nvim"
 . "$HOME/.cargo/env"
 #source ~/.bash_completion/alacritty
 
+alias l="exa"
 alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
