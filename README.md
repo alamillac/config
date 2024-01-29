@@ -253,6 +253,7 @@ sudo update-alternatives --config x-terminal-emulator
 ```
 
 Patched font for tmux [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip). More fonts [here](https://www.nerdfonts.com/font-downloads)
+Extract into ~/.local/share/fonts/firacode
 
 ```
 fc-cache -f -v # To update cache fonts
