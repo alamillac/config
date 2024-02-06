@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa zoxide
+apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa zoxide stow
 ```
 
 nvim telescope dependencies for fuzzy finder
@@ -57,6 +57,14 @@ apt install slim
 
 ```
 apt-get install xautolock imagemagick
+```
+
+#### Stow
+
+Copy dotfiles symlinks
+
+```
+stow .
 ```
 
 #### Oh-my-bash
