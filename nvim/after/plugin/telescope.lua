@@ -6,3 +6,14 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 -- end)
 vim.keymap.set('n', '<leader>pw', builtin.grep_string, {})
 vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+
+local telescope = require("telescope")
+
+telescope.setup {
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {}
+    }
+  }
+}
+telescope.load_extension("ui-select")

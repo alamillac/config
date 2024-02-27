@@ -54,4 +54,6 @@ return require('packer').startup(function(use)
   }
 
   use('nvimtools/none-ls.nvim')
+  use('jay-babu/mason-null-ls.nvim')
+  use('nvim-telescope/telescope-ui-select.nvim')
 end)

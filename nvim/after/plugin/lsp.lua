@@ -1,16 +1,24 @@
-local lsp = require('lsp-zero')
+local lsp_zero = require("lsp-zero")
 
 --lsp.preset({})
-lsp.preset("recommended")
+lsp_zero.preset("recommended")
 
-lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
-  --lsp.buffer_autoformat()
+lsp_zero.on_attach(function(client, bufnr)
+	local opts = { buffer = bufnr, remap = false }
+
+	-- see :help lsp-zero-keybindings
+	-- to learn the available actions
+	-- lsp_zero.default_keymaps({ buffer = bufnr })
+	-- lsp_zero.buffer_autoformat()
+
+	-- lspconfig keymap
+	-- Run  :h vim.lsp.buf  to find more uses of lsp
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+	vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 end)
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require("lspconfig").lua_ls.setup(lsp_zero.nvim_lua_ls())
 
-lsp.setup()
+lsp_zero.setup()

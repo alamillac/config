@@ -150,6 +150,7 @@ alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
 alias cat="batcat"
+alias igrep="grep -rni" # igrep "string" *
 
 # zoxide alias
 alias za='zoxide add'
