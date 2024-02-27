@@ -3,6 +3,13 @@ local lsp_zero = require("lsp-zero")
 --lsp.preset({})
 lsp_zero.preset("recommended")
 
+-- Global mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+
 lsp_zero.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
@@ -11,8 +18,8 @@ lsp_zero.on_attach(function(client, bufnr)
 	-- lsp_zero.default_keymaps({ buffer = bufnr })
 	-- lsp_zero.buffer_autoformat()
 
-	-- lspconfig keymap
-	-- Run  :h vim.lsp.buf  to find more uses of lsp
+	-- Buffer local mappings.
+	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
