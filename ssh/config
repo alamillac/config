@@ -1,5 +1,5 @@
 ControlMaster auto
-ControlPath   /home/alamilla/.ssh/tmp/%h_%p_%r
+ControlPath   ~/.ssh/tmp/%h_%p_%r
 
 Host monitor
   HostName monitor.lamillac.com
