@@ -63,20 +63,20 @@ vim.api.nvim_set_keymap('n', '<Leader>rw', 'viw"0p', { noremap = true })
 vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true })
 
 -- Easier moving of code blocks
-vim.api.nvim_set_keymap('x', '<', '<gv', { noremap = true })  -- better indentation
-vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true })  -- better indentation
+vim.api.nvim_set_keymap('x', '<', '<gv', { noremap = true }) -- better indentation
+vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true }) -- better indentation
 
 -- Make tab in visual mode work like keeping highlighting
 vim.api.nvim_set_keymap('x', '<Tab>', '>gv', { noremap = true })
 vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
 
-vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true })  -- Add closing parenthesis and brackets
-vim.api.nvim_set_keymap('i', '{{', '{}<Left><CR><CR><Up><C-f>', { noremap = true })  -- Add closing parenthesis and brackets. Press <CR> twice, go <Up> a line, and autoindent (<C-f>)
+vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true })                   -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true })                   -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true })                   -- Add closing parenthesis and brackets
+vim.api.nvim_set_keymap('i', '{{', '{}<Left><CR><CR><Up><C-f>', { noremap = true }) -- Add closing parenthesis and brackets. Press <CR> twice, go <Up> a line, and autoindent (<C-f>)
 
-vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true })  -- Add closing quotes
-vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true })  -- Add closing quotes
+vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true })                   -- Add closing quotes
+vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true })                   -- Add closing quotes
 
 -- Open a new tab and search for something
 -- vim.api.nvim_set_keymap('n', '<Leader>a', ':tab split<CR>:Ack ""<left>', { noremap = true })
@@ -87,9 +87,10 @@ vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true })  -- Add closin
 -- CtrlP Fuzzy file finder
 -- vim.api.nvim_set_keymap('n', '<Leader>f', ':CtrlP<CR>', { noremap = true })
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)  -- When in "normal mode" (n)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- When in "normal mode" (n)
 
-vim.keymap.set("n", "<leader>te",function ()
-    vim.cmd.tabnew()
-    vim.cmd.terminal()
+vim.keymap.set("n", "<leader>te", function()
+  -- <C-\><C-n> to exit terminal mode
+  vim.cmd.tabnew()
+  vim.cmd.terminal()
 end)
