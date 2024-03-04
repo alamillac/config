@@ -158,6 +158,9 @@ alias zq='zoxide query'
 alias zqi='zoxide query -i'
 alias zr='zoxide remove'
 
+# Lazygit
+alias lg='lazygit'
+
 #[ -f ~/.zoxide.bash ] && source ~/.zoxide.bash
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -283,3 +283,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 And then to install the plugins:
 'Ctl+b + I'
 inside a tmux session
+
+### Lazygit
+
+https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
