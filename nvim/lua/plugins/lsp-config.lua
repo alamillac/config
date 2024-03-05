@@ -5,31 +5,57 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-        "tsserver",
-        "eslint",
-        "rust_analyzer",
-        "pyright",
-        "gopls",
-        "bashls",
-      },
-    },
-    config = true,
+    config = function()
+      local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local lspconfig = require("lspconfig")
+
+      local default_setup = function(server)
+        lspconfig[server].setup({
+          capabilities = lsp_capabilities,
+        })
+      end
+
+      local lua_settings = {
+        capabilities = lsp_capabilities,
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT",
+            },
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = {
+                vim.env.VIMRUNTIME,
+              },
+            },
+          },
+        },
+      }
+
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls",
+          "tsserver",
+          "eslint",
+          "rust_analyzer",
+          "pyright",
+          "gopls",
+          "bashls",
+        },
+        handlers = {
+          default_setup,
+          lua_ls = function()
+            lspconfig.lua_ls.setup(lua_settings)
+          end,
+        },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      local lspconfig = require("lspconfig")
-
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({
-        capabilities = capabilities,
-      })
-
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
       vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
@@ -43,7 +69,7 @@ return {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(ev)
           -- Enable completion triggered by <c-x><c-o>
-          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+          vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
