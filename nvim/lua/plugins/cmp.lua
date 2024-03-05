@@ -10,8 +10,13 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
+      -- this is the function that loads the extra snippets to luasnip
+      -- from rafamadriz/friendly-snippets
+      require("luasnip.loaders.from_vscode").lazy_load()
+
       local cmp = require("cmp")
 
+      local cmp_select = { behavior = cmp.SelectBehavior.Select }
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -23,6 +28,8 @@ return {
           documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
+          -- ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+          -- ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
           ["<C-Space>"] = cmp.mapping.complete(),
@@ -34,7 +41,8 @@ return {
           { name = "nvim_lsp" },
           { name = "nvim_lua" },
           { name = "luasnip", keyword_length = 2 },
-          { name = "buffer",  keyword_length = 3 },
+        }, {
+          { name = "buffer", keyword_length = 3 },
         }),
       })
     end,

@@ -37,19 +37,25 @@ return {
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
       vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
-      -- see :help lsp-zero-keybindings
-      -- to learn the available actions
-      -- lsp_zero.default_keymaps({ buffer = bufnr })
-      -- lsp_zero.buffer_autoformat()
+      -- Use LspAttach autocommand to only map the following keys
+      -- after the language server attaches to the current buffer
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+        callback = function(ev)
+          -- Enable completion triggered by <c-x><c-o>
+          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-      -- Buffer local mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "gd", function()
-        vim.cmd.vsplit()
-        vim.lsp.buf.definition()
-      end, {})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+          -- Buffer local mappings.
+          -- See `:help vim.lsp.*` for documentation on any of the below functions
+          local opts = { buffer = ev.buf, remap = false }
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          vim.keymap.set("n", "gd", function()
+            vim.cmd.vsplit()
+            vim.lsp.buf.definition()
+          end, opts)
+          vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+        end,
+      })
     end,
   },
 }
