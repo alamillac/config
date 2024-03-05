@@ -87,7 +87,7 @@ vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true })               
 -- CtrlP Fuzzy file finder
 -- vim.api.nvim_set_keymap('n', '<Leader>f', ':CtrlP<CR>', { noremap = true })
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- When in "normal mode" (n)
+vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n)
 
 vim.keymap.set("n", "<leader>te", function()
   -- <C-\><C-n> to exit terminal mode
