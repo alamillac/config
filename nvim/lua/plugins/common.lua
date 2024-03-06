@@ -1,4 +1,12 @@
 return {
+  -- "gc" to comment visual regions/lines
+  { "numToStr/Comment.nvim",     opts = {} },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
+  { "echasnovski/mini.surround", version = false },
   {
     "tpope/vim-obsession",
   },
