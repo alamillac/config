@@ -1,17 +1,39 @@
 return {}
 -- return {
+--   -- https://github.com/nvim-lua/kickstart.nvim/blob/master/lua/kickstart/plugins/debug.lua
 --   "mfussenegger/nvim-dap",
 --   dependencies = {
+--     -- Creates a beautiful debugger UI
 --     "rcarriga/nvim-dap-ui",
+--
+--     -- Installs the debug adapters for you
+--     'jay-babu/mason-nvim-dap.nvim',
+--
+--     -- Add debuggers here
 --     "leoluz/nvim-dap-go",
 --   },
 --   config = function()
 --     local dap = require("dap")
 --     local dapui = require("dapui")
--- 
+--
+--     require('mason-nvim-dap').setup {
+--       -- Makes a best effort to setup the various debuggers with
+--       -- reasonable debug configurations
+--       automatic_setup = true,
+--
+--       -- You can provide additional configuration to the handlers,
+--       -- see mason-nvim-dap README for more information
+--       handlers = {},
+--
+--       ensure_installed = {
+--         -- Update this to ensure that you have the debuggers for the langs you want
+--         'delve',
+--       },
+--     }
+--
 --     require('dapui').setup()
 --     require('dap-go').setup()
--- 
+--
 --     dap.listeners.before.attach.dapui_config = function()
 --       dapui.open()
 --     end
@@ -24,7 +46,7 @@ return {}
 --     dap.listeners.before.event_exited.dapui_config = function()
 --       dapui.close()
 --     end
--- 
+--
 --     vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
 --     vim.keymap.set("n", "<Leader>dc", dap.continue, {})
 --   end,
