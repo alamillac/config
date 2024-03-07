@@ -287,3 +287,22 @@ inside a tmux session
 ### Lazygit
 
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
+
+### Install cuda
+
+Follow the following steps [here](https://www.youtube.com/watch?v=8i3BiWa5AZ4)
+
+Install cuda from [here](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
+
+
+Then install drivers
+```
+sudo apt install nvidia-driver-550
+```
+
+Check installation
+```
+git clone https://github.com/NVIDIA/cuda-samples
+cd Samples/6_Performance/LargeKernelParameter
+./LargeKernelParameter
+```
