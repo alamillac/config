@@ -11,3 +11,13 @@ vim.api.nvim_create_autocmd({'BufWinEnter'}, {
   pattern = '*',
   command = 'silent! normal! g`"zv',
 })
+
+-- function open_quickfix_in_tabs()
+--     local qflist = vim.fn.getqflist()
+--     print(qflist)
+--     for _, qf in ipairs(qflist) do
+--         vim.cmd('tabedit ' .. qf.filename)
+--     end
+-- end
+-- 
+-- vim.cmd('command! OpenQFixFiles lua open_quickfix_in_tabs()')
