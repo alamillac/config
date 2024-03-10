@@ -16,6 +16,7 @@ return {
           -- python
           null_ls.builtins.formatting.black,
           null_ls.builtins.formatting.isort,
+          null_ls.builtins.diagnostics.mypy,
           null_ls.builtins.diagnostics.pylint.with({
             extra_args = { "--disable", "c0114,c0115,c0116,c0301,w1203,w0703" },
           }),
