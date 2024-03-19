@@ -10,9 +10,9 @@ return {
         builtin.find_files({ hidden = true, no_ignore = true })
       end, {})
       vim.keymap.set("n", "<C-f>", builtin.git_files, {})
-      -- vim.keymap.set('n', '<leader>ps', function()
-      -- 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
-      -- end)
+      vim.keymap.set("n", "<leader>fg", function()
+        builtin.grep_string({ search = vim.fn.input("Grep > ") })
+      end)
       vim.keymap.set("n", "<leader>fw", builtin.grep_string, {})
       vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
     end,
