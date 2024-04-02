@@ -1,6 +1,14 @@
 return {
   {
-    'github/copilot.vim'
+    'github/copilot.vim',
+    config = function()
+      local file = io.open('/tmp/copilot_disabled', 'r')
+      if file~=nil then
+        file:close()
+        print("Copilot disabled")
+        vim.cmd("Copilot disable")
+      end
+    end
   },
   { "hrsh7th/cmp-nvim-lsp" },
   {
