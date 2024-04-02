@@ -40,6 +40,7 @@ set $mod Mod4
 exec --no-startup-id nm-applet #network-manager applet
 #exec --no-startup-id lxsession -s Lubuntu -e LXDE
 exec --no-startup-id  /usr/bin/feh --bg-scale "/documentos/Documents/Media/Images/wallpaper.jpg"
+exec --no-startup-id "~/bin/copilot_rand.sh"
 
 # Autolock
 # will not lock if mouse is in top right of screen, will activate lock if in bottom left
