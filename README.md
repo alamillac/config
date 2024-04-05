@@ -133,7 +133,6 @@ Alias vim to nvim in .bashrc
 ```
 alias vim="nvim"
 alias vi="nvim"
-```
 alias oldvim="vim"
 ```
 
