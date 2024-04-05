@@ -293,14 +293,16 @@ Follow the following steps [here](https://www.youtube.com/watch?v=8i3BiWa5AZ4)
 
 Install cuda from [here](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
-`## Install nvida driver and cuda toolkit
+## Install nvida driver and cuda toolkit
+
+```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin && \
 mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600 && \
 wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda-repo-ubuntu2204-11-7-local_11.7.0-515.43.04-1_amd64.deb && \
 dpkg -i cuda-repo-ubuntu2204-11-7-local_11.7.0-515.43.04-1_amd64.deb && \
 cp /var/cuda-repo-ubuntu2204-11-7-local/cuda-*-keyring.gpg /usr/share/keyrings/ && \
-apt-get update -q && apt-get -y install cuda`
-
+apt-get update -q && apt-get -y install cuda
+```
 
 Then install drivers
 ```
