@@ -1,81 +1,27 @@
 ControlMaster auto
 ControlPath   ~/.ssh/tmp/%h_%p_%r
 
-Host monitor
-  HostName monitor.lamillac.com
-  Port 17088
-  User alamilla
-
-Host visual
-  HostName monitor.lamillac.com
-  Port 17088
-  User visual
-  IdentityFile ~/.ssh/visual_engin
-
-Host semantic
-  HostName 198.100.144.97
-  Port 17088
-
-Host semantic2
-  HostName 64.71.72.54
-  Port 17088
-
-Host semantic2-vmbase
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.220 17088
-
-Host semantic2-proxyweb
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.9 17088
-
-Host semantic2-stanbol
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.10 17088
-
-Host semantic2-blinu
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.100 17088
-
-Host semantic2-static
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.20 22
-
-Host semantic2-books
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.200 17088
-
-Host semantic2-lk-semantic
-  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.201 17088
-
-Host semantic-produccion
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.10 17088
-
-Host semantic-desarrollo
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.11 17088
-
-Host semantic-backend
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.21 17088
-
-Host semantic-vmbase
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.220 17088
-
-Host semantic-docker
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.12 17088
-
-Host semantic-libros-desarrollo
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.13 17088
-
-Host semantic-docker-base
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.200 17088
-
-Host semantic-test
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.101 17088
-
-Host semantic-frontend90
-  HostName 198.100.144.97
-  Port 17090
-
-Host semantic-proxyweb
-  ProxyCommand ssh -q semantic nc -q0 192.168.1.9 17088
-
-Host amazon
- HostName 54.187.87.57
- User ubuntu
- IdentityFile ~/aws/aws.pem
+#Host monitor
+#  HostName monitor.lamillac.com
+#  Port 17088
+#  User alamilla
+#
+#Host visual
+#  HostName 198.100.144.97
+#  Port 17088
+#  User visual
+#  IdentityFile ~/.ssh/visual_engin
+#
+#Host semantic2-static
+#  ProxyCommand ssh -q semantic2 nc -q0 192.168.1.20 22
+#
+#Host semantic-test
+#  ProxyCommand ssh -q semantic nc -q0 192.168.1.101 17088
+#
+#Host amazon
+# HostName 54.187.87.57
+# User ubuntu
+# IdentityFile ~/aws/aws.pem
 
 Host *
   User alamilla
