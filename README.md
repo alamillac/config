@@ -333,3 +333,15 @@ bluetoothctl discoverable off
 bluetoothctl paired-devices
 bluetoothctl scan on
 ```
+
+### Shell utils
+
+- Use ts to add timestamp to output
+
+```
+# Option 1
+GIT_SSH_COMMAND="ssh -v" git pull 2>&1 | ts "[%Y-%m-%d %H:%M:%.S]"
+
+# Option 2
+GIT_SSH_COMMAND="ssh -v" git pull 2>&1 | ts -i "%.S" | ts -s "%.S"
+```
