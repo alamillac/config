@@ -161,7 +161,7 @@ alias zr='zoxide remove'
 # Lazygit
 alias lg='lazygit'
 
-#[ -f ~/.zoxide.bash ] && source ~/.zoxide.bash
+[ -f ~/.zoxide.bash ] && source ~/.zoxide.bash
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
