@@ -319,3 +319,17 @@ cd Samples/6_Performance/LargeKernelParameter
 ### Install Miniconda (Python)
 
 Follow [this steps](https://docs.anaconda.com/free/miniconda/)
+
+### Bluetooth
+
+```
+bluetoothctl connect 20:74:CF:4A:3C:E4
+systemctl status bluetooth.service
+bluetoothctl disconnect 20:74:CF:4A:3C:E4
+bluetoothctl list
+bluetoothctl show 20:74:CF:4A:3C:E4
+bluetoothctl pairable off
+bluetoothctl discoverable off
+bluetoothctl paired-devices
+bluetoothctl scan on
+```
