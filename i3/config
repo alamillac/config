@@ -25,11 +25,13 @@ assign [class="Skype"] 5
 assign [class="VirtualBox"] 6
 assign [class="Audacious"] 10
 assign [class="Vlc"] 10
+assign [class="Banana.x86_64"] 10
 
 for_window [instance="gimp"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="Audacious"] floating enable
 for_window [class="Skype"] floating enable
+for_window [class="Banana.x86_64"] floating enable
 
 focus_follows_mouse no
 
@@ -39,12 +41,15 @@ set $mod Mod4
 
 exec --no-startup-id nm-applet #network-manager applet
 #exec --no-startup-id lxsession -s Lubuntu -e LXDE
-exec --no-startup-id  /usr/bin/feh --bg-scale "/documentos/Documents/Media/Images/wallpaper.jpg"
+exec --no-startup-id /usr/bin/feh --bg-scale "/home/andres/Imágenes/wallpaper.jpg"
 exec --no-startup-id "~/bin/copilot_rand.sh"
 
 # Autolock
 # will not lock if mouse is in top right of screen, will activate lock if in bottom left
 exec --no-startup-id xautolock -time 2 -locker "~/bin/fuzzy_lock.sh" -notify 5 -notifier "notify-send i3lock 5s" -corners 0-+0 -cornersize 30
+
+# Screenlayout
+exec --no-startup-id "~/.screenlayout/home.sh"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
