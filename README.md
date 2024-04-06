@@ -293,7 +293,7 @@ Follow the following steps [here](https://www.youtube.com/watch?v=8i3BiWa5AZ4)
 
 Install cuda from [here](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
-## Install nvida driver and cuda toolkit
+#### Install nvida driver and cuda toolkit
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin && \
@@ -315,3 +315,7 @@ git clone https://github.com/NVIDIA/cuda-samples
 cd Samples/6_Performance/LargeKernelParameter
 ./LargeKernelParameter
 ```
+
+### Install Miniconda (Python)
+
+Follow [this steps](https://docs.anaconda.com/free/miniconda/)
