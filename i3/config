@@ -25,7 +25,6 @@ assign [class="Skype"] 5
 assign [class="VirtualBox"] 6
 assign [class="Audacious"] 10
 assign [class="Vlc"] 10
-assign [class="Banana.x86_64"] 10
 
 for_window [instance="gimp"] floating enable
 for_window [class="VirtualBox"] floating enable

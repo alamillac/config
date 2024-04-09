@@ -347,3 +347,33 @@ GIT_SSH_COMMAND="ssh -v" git pull 2>&1 | ts "[%Y-%m-%d %H:%M:%.S]"
 # Option 2
 GIT_SSH_COMMAND="ssh -v" git pull 2>&1 | ts -i "%.S" | ts -s "%.S"
 ```
+
+### Disable Display Power Management Signaling (DPMS)
+
+[nvidia problem with suspend](https://forums.developer.nvidia.com/t/not-coming-back-from-suspend/176446/22)
+
+If the nvidia card is having problems to resume from the suspend mode it is possible to disable the power savings.
+
+- Check if it is enabled
+
+```
+xset -q | awk '/DPMS is/ {print $NF}'
+```
+
+- To disable
+
+```
+xset -dpms
+```
+
+- To enable
+
+```
+xset dpms
+```
+
+- To force a suspend
+
+```
+xset dpms force suspend
+```
