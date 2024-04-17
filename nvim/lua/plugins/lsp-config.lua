@@ -80,6 +80,8 @@ return {
             vim.cmd.vsplit()
             vim.lsp.buf.definition()
           end, opts)
+          vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
         end,
       })
