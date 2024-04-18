@@ -19,8 +19,8 @@ vim.api.nvim_set_keymap('i', '<Up>', '<Nop>', { noremap = true, silent = true })
 -- Remap esc key
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true })
 
--- With the following mapping a user can press F5 to delete all trailing whitespace
-vim.api.nvim_set_keymap('n', '<F5>', [[:%s/\s\+$//e<CR>:nohlsearch<CR>]], { noremap = true, silent = true })
+-- With the following mapping a user can delete all trailing whitespace
+vim.api.nvim_set_keymap('n', '<Leader>,', [[:%s/\s\+$//e<CR>:nohlsearch<CR>]], { noremap = true, silent = true })
 
 -- easier moving between tabs
 vim.api.nvim_set_keymap('n', '<Leader>n', ':tabprevious<CR>', { noremap = true, silent = true })
@@ -88,7 +88,7 @@ vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
 -- vim.api.nvim_set_keymap('n', '<Leader>f', ':CtrlP<CR>', { noremap = true })
 
 -- Search the word under the cursor with vimgrep
-vim.api.nvim_set_keymap('n', '<Leader>G', ':vimgrep \\<C-r><C-w>\\ `find . -type f`<CR>', { noremap = true }) -- :copen<CR>
+vim.api.nvim_set_keymap('n', '<Leader>G', ':vimgrep \\<C-r><C-w>\\ `find . -type f`<CR>', { noremap = true, silent = true }) -- :copen<CR>
 
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n)
 

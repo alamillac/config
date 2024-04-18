@@ -12,6 +12,16 @@ vim.api.nvim_create_autocmd({'BufWinEnter'}, {
   command = 'silent! normal! g`"zv',
 })
 
+-- To remove trailing white space on save
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--     pattern = {"*"},
+--     callback = function()
+--       local save_cursor = vim.fn.getpos(".")
+--       pcall(function() vim.cmd [[%s/\s\+$//e]] end)
+--       vim.fn.setpos(".", save_cursor)
+--     end,
+-- })
+
 -- function open_quickfix_in_tabs()
 --     local qflist = vim.fn.getqflist()
 --     print(qflist)
