@@ -6,69 +6,76 @@
 -- Remaps:
 
 -- Unmap the arrow keys
-vim.api.nvim_set_keymap('n', '<Down>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Left>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('i', '<Down>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<Left>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<Right>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Down>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Left>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Right>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Up>", "<Nop>", { noremap = true, silent = true })
 
 -- Remap esc key
-vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true })
+vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true })
 
 -- With the following mapping a user can delete all trailing whitespace
-vim.api.nvim_set_keymap('n', '<Leader>,', [[:%s/\s\+$//e<CR>:nohlsearch<CR>]], { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>,", [[:%s/\s\+$//e<CR>:nohlsearch<CR>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>,", function()
+  local save_cursor = vim.fn.getpos(".")
+  pcall(function()
+    vim.cmd([[%s/\s\+$//e]])
+  end) -- To catch errors use pcall()
+  vim.fn.setpos(".", save_cursor)
+end)
 
 -- easier moving between tabs
-vim.api.nvim_set_keymap('n', '<Leader>n', ':tabprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>m', ':tabnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>n", ":tabprevious<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>m", ":tabnext<CR>", { noremap = true, silent = true })
 
 -- Buffer navigation
-vim.api.nvim_set_keymap('n', '<M-Left>', ':bprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-Right>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<M-Left>", ":bprevious<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<M-Right>", ":bnext<CR>", { noremap = true, silent = true })
 
 -- Usar <líder> + y para copiar al portapapeles
-vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true })
 
 -- Usar <líder> + d para cortar al portapapeles
-vim.api.nvim_set_keymap('v', '<leader>d', '"+d', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>d', '"+d', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>d", '"+d', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>d", '"+d', { noremap = true })
 
 -- Usar <líder> + p para pegar desde el portapapeles
-vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>P', '"+P', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>p", '"+p', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>P", '"+P', { noremap = true })
 
 -- Execute shell commands in buffer
-vim.api.nvim_set_keymap('n', 'Q', '!!bash<CR>', { noremap = true })
+vim.api.nvim_set_keymap("n", "Q", "!!bash<CR>", { noremap = true })
 
 -- Python IDE Setup
-vim.api.nvim_set_keymap('n', '<Leader>b', 'Oimport ipdb; ipdb.set_trace()  # BREAKPOINT<C-c>', { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>b", "Oimport ipdb; ipdb.set_trace()  # BREAKPOINT<C-c>", { noremap = true })
 
 -- Bind Ctrl+<movement> keys to move around the windows
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
 
 -- Replace a word with another saved in the 0 register
-vim.api.nvim_set_keymap('n', '<Leader>rw', 'viw"0p', { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>rw", 'viw"0p', { noremap = true })
 
 -- Copy all line
-vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true })
+vim.api.nvim_set_keymap("n", "Y", "yy", { noremap = true })
 
 -- Easier moving of code blocks
-vim.api.nvim_set_keymap('x', '<', '<gv', { noremap = true }) -- better indentation
-vim.api.nvim_set_keymap('x', '>', '>gv', { noremap = true }) -- better indentation
+vim.api.nvim_set_keymap("x", "<", "<gv", { noremap = true }) -- better indentation
+vim.api.nvim_set_keymap("x", ">", ">gv", { noremap = true }) -- better indentation
 
 -- Make tab in visual mode work like keeping highlighting
-vim.api.nvim_set_keymap('x', '<Tab>', '>gv', { noremap = true })
-vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
+vim.api.nvim_set_keymap("x", "<Tab>", ">gv", { noremap = true })
+vim.api.nvim_set_keymap("x", "<S-Tab>", "<gv", { noremap = true })
 
 -- vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true })                   -- Add closing parenthesis and brackets
 -- vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true })                   -- Add closing parenthesis and brackets
@@ -88,7 +95,12 @@ vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
 -- vim.api.nvim_set_keymap('n', '<Leader>f', ':CtrlP<CR>', { noremap = true })
 
 -- Search the word under the cursor with vimgrep
-vim.api.nvim_set_keymap('n', '<Leader>G', ':vimgrep \\<C-r><C-w>\\ `find . -type f`<CR>', { noremap = true, silent = true }) -- :copen<CR>
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>G",
+  ":vimgrep \\<C-r><C-w>\\ `find . -type f`<CR>",
+  { noremap = true, silent = true }
+) -- Open the quickfix to see the results :copen<CR>
 
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n)
 
