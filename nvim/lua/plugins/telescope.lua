@@ -13,7 +13,18 @@ return {
       vim.keymap.set("n", "<leader>fg", function()
         builtin.grep_string({ search = vim.fn.input("Grep > ") })
       end)
-      vim.keymap.set("n", "<leader>fw", builtin.grep_string, {})
+      vim.keymap.set("n", "<leader>fw", function() -- Search for occurrences of the specific word
+        builtin.grep_string({
+          use_regex = false,
+          additional_args = {
+            "--case-sensitive", -- rg options
+            "--fixed-strings", -- rg options (Treat the pattern as a literal string instead of a regular expression)
+            "--word-regexp", -- rg options (Only show matches surrounded by word boundaries)
+            "--hidden",
+          },
+        })
+      end, {})
+      vim.keymap.set("n", "<leader>fW", builtin.grep_string, {})
       vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
     end,
   },

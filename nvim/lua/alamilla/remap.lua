@@ -87,6 +87,9 @@ vim.api.nvim_set_keymap('x', '<S-Tab>', '<gv', { noremap = true })
 -- CtrlP Fuzzy file finder
 -- vim.api.nvim_set_keymap('n', '<Leader>f', ':CtrlP<CR>', { noremap = true })
 
+-- Search the word under the cursor with vimgrep
+vim.api.nvim_set_keymap('n', '<Leader>G', ':vimgrep \\<C-r><C-w>\\ `find . -type f`<CR>', { noremap = true }) -- :copen<CR>
+
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n)
 
 vim.keymap.set("n", "<leader>te", function()
