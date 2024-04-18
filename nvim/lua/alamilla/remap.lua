@@ -109,3 +109,5 @@ vim.keymap.set("n", "<leader>te", function()
   vim.cmd.tabnew()
   vim.cmd.terminal()
 end)
+
+-- ctrl+g to show current path and num lines
