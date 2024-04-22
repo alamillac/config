@@ -112,8 +112,8 @@ end)
 
 -- ctrl+g to show current path and num lines
 
-vim.keymap.set("n", "*", "/\\<\\C<C-r><C-w>\\><CR>", { noremap = true }) -- Search word case sensitive
-vim.keymap.set("n", "#", "?\\<\\C<C-r><C-w>\\><CR>", { noremap = true }) -- Search word case sensitive
+vim.keymap.set("n", "*", "/\\C\\<<C-r><C-w>\\><CR>", { noremap = true }) -- Search word case sensitive
+vim.keymap.set("n", "#", "?\\C\\<<C-r><C-w>\\><CR>", { noremap = true }) -- Search word case sensitive
 
 vim.keymap.set("n", "<leader>*", "*", { noremap = true }) -- "/\\<<C-r><C-w>\\><CR>"
 vim.keymap.set("n", "<leader>#", "#", { noremap = true }) -- "?\\<<C-r><C-w>\\><CR>"
