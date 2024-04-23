@@ -20,7 +20,8 @@ return {
             "--case-sensitive", -- rg options
             "--fixed-strings", -- rg options (Treat the pattern as a literal string instead of a regular expression)
             "--word-regexp", -- rg options (Only show matches surrounded by word boundaries)
-            "--hidden",
+            "--hidden", -- rg options (include hidden files)
+            -- "--no-ignore" -- rg options (include files listed in .gitignore)
           },
         })
       end, {})
