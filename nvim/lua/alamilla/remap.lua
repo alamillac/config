@@ -102,8 +102,7 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )                                             -- Open the quickfix to see the results :copen<CR>
 
--- vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n)
-vim.keymap.set("n", "<leader>fv", "<CMD>Oil<CR>", { desc = "Open parent directory" }) -- When in "normal mode" (n)
+-- vim.keymap.set("n", "<leader>fv", vim.cmd.Ex) -- When in "normal mode" (n) -- This keymap is used in Oil
 
 vim.keymap.set("n", "<leader>te", function()
   -- <C-\><C-n> to exit terminal mode
