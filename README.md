@@ -11,7 +11,7 @@ Execute the init.sh script, to create the symbolic links to config files, and th
 #### Linux dependencies
 
 ```
-apt install i3 i3status keepassx vim tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential vim-nox curl lxterminal bat exa zoxide stow
+apt install i3 i3status libnotify-bin keepassx tmux zsh silversearcher-ag ack-grep pavucontrol arandr build-essential curl bat exa zoxide stow
 ```
 
 nvim telescope dependencies for fuzzy finder
