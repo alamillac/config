@@ -7,6 +7,7 @@ return {
     config = true,
   },
   { "echasnovski/mini.surround", version = false },
+  { 'echasnovski/mini.ai', version = false },
   {
     "tpope/vim-obsession",
   },
