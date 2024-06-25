@@ -10,6 +10,8 @@ return {
       local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
+      lspconfig.gleam.setup({}) -- Gleam support
+
       local default_setup = function(server)
         lspconfig[server].setup({
           capabilities = lsp_capabilities,
